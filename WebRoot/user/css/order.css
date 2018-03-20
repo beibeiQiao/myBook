@@ -1,0 +1,39 @@
+/* CSS Document */
+body{ 
+background:rgba(242,241,227,1.00);
+padding-top: 60px;
+}
+.now_positionm{ width:1200px;height:40px; margin:0 auto; overflow:hidden}
+.now_positionm span{display:block; float:left; font-size:14px; color:#333; height:20px; line-height:20px; margin-top:10px}
+.now_positionm a{display:block; height:20px; line-height:20px; float:left; font-size:14px; color:#333; margin-top:10px}
+.now_positionm a:hover{ color:#fa3b4a}
+.centers_mr{ width:930px; height:auto; margin:0 auto; background:#fff; box-shadow:0 0 2px #eaeaea; overflow:hidden; padding:20px; padding-bottom:73px；filter:alpha(Opacity=80);-moz-opacity:0.5;opacity: 0.8;}
+.public_m2{ width:888px;height:20px; overflow:hidden; line-height:20px; font-size:18px; color:#333; border-left:3px solid #fa3b4a; text-indent:6px; margin-bottom:19px}
+/*一个订单信息*/
+.public_m5{width:888px;height:auto; overflow:hidden}
+.public_m5 table tbody tr th{ background:#eaeaea; height:36px; font-weight:100; font-size:16px; text-align:center; line-height:36px}
+.public_m5 table{ width:888px}
+.public_m5 table tbody tr td{ text-align:center; height:30px; line-height:30px; font-size:12px; color:#333; border-bottom:1px solid #eaeaea}
+.public_m5 table tbody tr td a{color:#09f; margin-right:3px}
+.public_m5 table tbody tr td a:hover{color:#fa3b4a}
+
+.public_m6{ width:888px;height:auto; overflow:hidden}    
+.public_m6 img{display:block; width:888px; height:auto}   
+footer{
+	margin:0 auto;
+	text-align: center;
+	margin-top: 40px;}
+#BookStore {
+    font-size: 36px;
+    font-family: "OctemberScript";
+    color: rgb(255, 249, 242);
+    line-height: 1.2;
+    text-align: center;
+    position: relative;
+    left: 2%;
+    top: -1.993px;
+    z-index: 2;
+    text-shadow: 0px 12px 19.92px rgba(65, 49, 84, 0.15);
+}}
+	
+

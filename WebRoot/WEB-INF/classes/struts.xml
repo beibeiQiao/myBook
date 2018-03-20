@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <constant name="struts.i18n.encoding" value="utf-8"/>
+     <!-- 打开开发者模式：错误信息会输出在web页面上-->
+     <constant name="struts.devMode" value="true" />
+     <!-- 关闭struts的默认主题样式 -->
+     <constant name="struts.ui.theme" value="simple" />
+     <!--Struts2中Action对象的创建交给spring完成-->
+     <constant name="struts.objectFactory" value="spring" />  
+     
+     <!-- namespace用于规范化命名 -->
+     <package name="user" extends="struts-default" namespace="/" >
+     	<!--
+			class="foodAction"就相当于 class="com.xiaotang.FoodAction",是因为在FoodAction中
+			配置了@Controller @Scope("prototype"),它给类的代理名称默认为”类名“的首字母小写，其他不变，因而此处为
+			foodAction   		
+     	-->
+     	<!-- 与user相关的配置 -->
+     	<!-- user登录配置 -->
+	    <action name="user_userLogin" class="com.action.UserAction" method="userLogin">
+	        <result name="index">/user/index.jsp</result>
+	        <result name="userLogin">/userLogin.jsp</result>
+	    </action>
+	    <action name="user_register" class="com.action.LoginAndRegisterAction" method="register">
+	        <result name="index">/user/index.jsp</result>
+	        <result name="register">/register.jsp</result>
+	    </action> 
+	    
+	    <!-- 与订单相关的配置 -->
+	    <action name="user_getMyOrder" class="com.action.UserAction" method="getMyOrder">
+	    	<result name="showOrder">/user/showOrder.jsp</result>
+	    </action>
+	    <action name="user_deleteOrder" class="com.action.OrderAction" method="deleteOrder">
+	    	<result name="showOrder">/user/showOrder.jsp</result>
+	    </action>
+	    <action name="user_addOrder" class="com.action.OrderAction" method="addOrder">
+	    	<result name="successAddOrder">/user/successAddOrder.jsp</result>
+	    </action>
+	</package>
+	
+	
+	<package name="admin" extends="struts-default" namespace="/">
+		<!-- 与admin相关的配置 -->
+		<!-- admin登录 -->
+	    <action name="admin_adminLogin" class="com.action.AdminAction" method="adminLogin">
+			<result name="manage_user">/admin/manage_user.jsp</result>
+			<result name="adminLogin">/adminLogin.jsp</result>
+		</action>
+		
+		<!-- admin获取所有用户 -->
+		<action name="admin_getAllUser" class="com.action.AdminAction" method="getAllUser">
+			<result name="manage_user">/admin/manage_user.jsp</result>
+		</action>
+		<!-- admin获取所有管理员 -->
+		<action name="admin_getAllAdmin" class="com.action.AdminAction" method="getAllAdmin">
+			<result name="manage_admin">/admin/manage_admin.jsp</result>
+		</action>
+		<!-- admin获取所有book -->
+		<action name="admin_getAllBook" class="com.action.AdminAction" method="getAllBook">
+			<result name="manage_book">/admin/manage_book.jsp</result>
+		</action>
+		<!-- admin获取所有order -->
+		<action name="admin_getAllOrder" class="com.action.AdminAction" method="getAllOrder">
+			<result name="manage_order">/admin/manage_order.jsp</result>
+		</action>
+		<!-- admin获取所有super -->
+		<action name="admin_getAllSuper" class="com.action.AdminAction" method="getAllSuper">
+			<result name="manage_super">/admin/manage_super.jsp</result>
+		</action>
+		
+		<!-- admin添加user -->
+		<action name="admin_addUser" class="com.action.AdminAction" method="addUser">
+			<result name="manage_user">/admin/manage_user.jsp</result>
+		</action>
+		<!-- admin跳转到修改user页面 -->
+		<action name="admin_skipUpdateUser" class="com.action.AdminAction" method="skipUpdateUser">
+			<result name="updateUser">/admin/updateUser.jsp</result>
+		</action>
+		<!-- admin修改user -->
+		<action name="admin_updateUser" class="com.action.AdminAction" method="updateUser">
+			<result name="manage_user">/admin/manage_user.jsp</result>
+		</action>
+		<!-- admin删除user -->
+		<action name="admin_deleteUser" class="com.action.AdminAction" method="deleteUser">
+			<result name="manage_user">/admin/manage_user.jsp</result>
+		</action>
+		<!-- admin根据条件查询user -->
+		<action name="admin_getUserInfo" class="com.action.AdminAction" method="getUserInfo">
+			<result name="manage_user">/admin/manage_user.jsp</result>
+		</action>
+		
+		<!-- admin添加书籍 -->
+		<action name="admin_addBook" class="com.action.AdminAction" method="addBook">
+			<result name="manage_book">/admin/manage_book.jsp</result>
+		</action>
+		<!-- admin删除书籍 -->
+		<action name="admin_deleteBook" class="com.action.AdminAction" method="deleteBook">
+			<result name="manage_book">/admin/manage_book.jsp</result>
+		</action>
+		<!-- admin跳转到更新book信息页面-->
+		<action name="admin_skipUpdateBook" class="com.action.AdminAction" method="skipUpdateBook">
+			<result name="updateBook">/admin/updateBook.jsp</result>
+		</action>
+		<!-- admin更新book信息 -->
+		<action name="admin_updateBook" class="com.action.AdminAction" method="updateBook">
+			<result name="manage_book">/admin/manage_book.jsp</result>
+		</action>
+		<!-- 根据条件查询书籍 -->
+		<action name="admin_getBookInfo" class="com.action.AdminAction" method="getBookInfo">
+			<result name="manage_book">/admin/manage_book.jsp</result>
+		</action>
+		
+		<!-- 与type相关 -->
+		<action name="admin_getAllType" class="com.action.AdminAction" method="getAllType">
+			<result name="manage_type">/admin/manage_type.jsp</result>
+		</action>
+		<action name="admin_deleteType" class="com.action.AdminAction" method="deleteType">
+			<result name="manage_type">/admin/manage_type.jsp</result>
+		</action>
+		<!-- 与admin相关的配置 -->
+		<!-- 与order相关 -->
+		<action name="admin_deleteOrder" class="com.action.AdminAction" method="deleteOrder">
+			<result name="manage_order">/admin/manage_order.jsp</result>
+		</action>
+		<!-- 查询order -->
+		<action name="admin_getOrderInfo" class="com.action.AdminAction" method="getOrderInfo">
+			<result name="manage_order">/admin/manage_order.jsp</result>
+		</action>
+	</package>
+	
+</struts>

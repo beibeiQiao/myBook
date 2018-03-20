@@ -1,0 +1,112 @@
+@CHARSET "UTF-8";
+@charset "utf-8";
+/* CSS Document */
+*{background-color:#fffeea;}
+.nagivation{margin:5px auto;width:10%;height:40;}
+.container{width:100%;width:10%;height:auto;}
+.container indexer{width:50%;height:auto;text-align:center;font-size:14px;float:left;}
+.container bookList{width:60%;height:600px;float:left;margin:10px 10px 10px 300px;}
+.box{
+	width:1800px;
+	height:500px;
+	margin:10px auto;
+}
+
+.box .link{
+	width:300px;
+	height:300px;
+	float:left;
+	margin:50px 50px;
+	text-align:center;
+}
+.box .link .icon{
+	display:inline-block;
+	transition:all 0.2s ease-in;
+}
+.box .link .icon:hover{
+	/*顺时针旋转360度 ，scale以图片中心为中心缩放1.5倍，zoom则是以左上角为中心缩放*/
+	transform:rotate(360deg) scale(1.5);
+}
+
+.box .link .button{
+	display:inline-block;
+	padding-top:10px;
+	width:250px;
+	height:30px;
+	/*text-align:center;*/	
+	text-decoration:none;
+	color:#ff80c0;
+	font-family:Arial;
+	font-size:24px;
+	font-weight:bolder;
+	margin:10px auto;
+	
+	/*边框*/
+	border:4px solid; 
+	border-radius: 3px;
+	opacity:0.6;
+	background-size:25px 12px;/*手动指定图片大小*/
+	transition: all 0.4s ease-in-out;
+	position: relative;
+}
+.box .link .button .text{
+	margin-left:-70px;
+	
+}
+.box .link .button:hover{
+	opacity:1;
+	background-position:130px;
+}
+/*线条动画*/
+.box .link .button .line{
+	position: absolute;
+}
+/*鼠标停留才会有背景出现*/
+.box .link .button:hover .line{
+	background-color: #ff0080;
+	transition: all 0.5s ease;
+}
+/*上边*/
+.box .link .button .line-top{
+	height:2px;
+	width:0px;
+	left:-120%;
+	top:-2px;
+}
+.box .link .button:hover .line-top{
+	width:80%;
+	left:-2px;
+}
+/*下边*/
+.box .link .button .line-bottom{
+	height:2px;
+	width:0px;
+	right:-120%;
+	bottom:-2px;
+}
+.box .link .button:hover .line-bottom{
+	width:80%;
+	right:-2px;
+}
+/*左边*/
+.box .link .button .line-left{
+	height:0px;
+	width:2px;
+	left:-2px;
+	bottom:-120%;
+}
+.box .link .button:hover .line-left{
+	height:100%;
+	bottom:-2px;
+}
+/*右边*/
+.box .link .button .line-right{
+	height:0px;
+	width:2px;
+	right:-2px;
+	top:-120%;
+}
+.box .link .button:hover .line-right{
+	height:100%;
+	top:-2px;
+}

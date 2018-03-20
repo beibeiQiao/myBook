@@ -1,0 +1,162 @@
+@CHARSET "UTF-8";
+/* CSS Document */
+body{background:rgba(242,241,227,1.00);}
+header{
+	width:1500px;
+	margin-top:50px;
+	height:30px;
+	background:url(../images/headerground.jpg);
+	padding:0px 100px;
+	font-size:22px;
+	font-weight:bolder;
+	position:fixed;
+	display:block;
+	}
+.container indexer{
+	width:150px;
+	float:left;
+	border:5px #EDE1E1 medium;
+	position:fixed;
+	display:block;
+	left:1px;bottom:1px;
+	background:url(../images/headerground.jpg);
+	}
+	
+#BookStore {
+    font-size: 36px;
+    font-family: "OctemberScript";
+    color: rgb(255, 249, 242);
+    line-height: 1.2;
+    text-align: center;
+    position: relative;
+    left: 2%;
+    top: -1.993px;
+    z-index: 2;
+    text-shadow: 0px 12px 19.92px rgba(65, 49, 84, 0.15);
+}
+.container .link{
+	float:left;
+	font-size:20px;
+	margin:30.5px;
+}
+a:link{color:#8080ff;text-decoration:none;}
+a:hover{color:#29F309;}
+li{ list-style-type:none;}
+
+.box{
+	float:right;
+	width:1000px;
+	margin:10px;
+	padding:80px 10px;
+	border:7px #624A4B outset;
+}
+.box .link{
+	width:180px;
+	height:230px;
+	border:5px #330708 double;
+	float:left;
+	margin:20px 30px;
+	padding:10px;
+	text-align:center;
+}
+.box .link .icon{
+	width:150px;
+	height:130px;
+	display:inline-block;
+	transition:all 0.2s ease-in;
+}
+.box .link1{
+	width:240px;
+	height:350px;
+	border:5px #330708 double;
+	float:left;
+	margin-top:50px;
+}
+.box .link1 .icon{
+	width:230px;
+	height:350px;
+	display:inline-block;
+}
+.box .link .icon:hover{
+	/*scale以图片中心为中心缩放1.1倍，zoom则是以左上角为中心缩放*/
+	transform: scale(1.1);
+}
+.jsp{overflow:hidden;position: absolute;background:#000;top:0px;left:0px;}
+
+.box .link .button{
+	display:inline-block;
+	padding-top:5px;
+	width:150px;
+	height:auto;
+	/*text-align:center;*/	
+	text-decoration:none;
+	color:#383E58;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bolder;
+	margin:10px auto;
+	
+	/*边框*/
+	border:4px solid; 
+	border-radius: 3px;
+	opacity:0.6;
+	transition: all 0.4s ease-in-out;
+	position: relative;
+}
+.box .link .button:hover{
+	opacity:1;
+	background-position:130px;
+}
+/*线条动画*/
+.box .link .button .line{
+	position: absolute;
+}
+/*鼠标停留才会有背景出现*/
+.box .link .button:hover .line{
+	background-color:#2628A3;
+	transition: all 0.5s ease;
+}
+/*上边*/
+.box .link .button .line-top{
+	height:2px;
+	width:0px;
+	left:-120%;
+	top:-2px;
+}
+.box .link .button:hover .line-top{
+	width:80%;
+	left:-2px;
+}
+/*下边*/
+.box .link .button .line-bottom{
+	height:2px;
+	width:0px;
+	right:-120%;
+	bottom:-2px;
+}
+.box .link .button:hover .line-bottom{
+	width:80%;
+	right:-2px;
+}
+/*左边*/
+.box .link .button .line-left{
+	height:0px;
+	width:2px;
+	left:-2px;
+	bottom:-120%;
+}
+.box .link .button:hover .line-left{
+	height:100%;
+	bottom:-2px;
+}
+/*右边*/
+.box .link .button .line-right{
+	height:0px;
+	width:2px;
+	right:-2px;
+	top:-120%;
+}
+.box .link .button:hover .line-right{
+	height:100%;
+	top:-2px;
+}
